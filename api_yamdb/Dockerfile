@@ -13,7 +13,7 @@ COPY requirements.txt /app
 
 # Выполнить установку зависимостей внутри контейнера.
 RUN apt-get update \
-    && apt-get -y install libpq-dev gcc
+   && apt-get -y install libpq-dev gcc
 RUN python3 -m pip install --upgrade pip setuptools
 RUN pip3 install -r /app/requirements.txt --no-cache-dir
 
