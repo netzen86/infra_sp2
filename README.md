@@ -9,9 +9,18 @@ Django REST framework 3.12.4
 Gunicorn 20.0.4
 Nginx 1.21.3
 Postgres 13.0
+Docker-compose 1.29.2
 
 ## Запуск приложения
-
+В каталоге с проектом создайте файл .env в котором опишите секреты для подключения к БД
+```
+DB_ENGINE=django.db.backends.postgresql # указываем, что работаем с postgresql
+DB_NAME=postgres # имя базы данных
+POSTGRES_USER=postgres # логин для подключения к базе данных
+POSTGRES_PASSWORD=postgres # пароль для подключения к БД (установите свой)
+DB_HOST=db # название сервиса (контейнера)
+DB_PORT=5432 # порт для подключения к БД
+```
 Для запуска приложения перейдите в каталог infra и выполните команду
 ```
 docker-compose up -d --build                          
