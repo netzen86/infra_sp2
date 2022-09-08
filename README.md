@@ -46,7 +46,7 @@ docker-compose exec web python manage.py collectstatic --no-input
 
 Все функции и эндпоинты описаны в документации:
 ```
-http://127.0.0.1:8000/redoc/
+http://127.0.0.1/redoc/
 ```
 ## Заполнение базы данных
 
